@@ -1,1 +1,1 @@
-web: gunicorn ffblog.wsgi
+web:gunicorn ffblog.wsgi
