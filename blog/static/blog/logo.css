@@ -1,0 +1,67 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: black;
+    height:100vh;
+  }
+  .tubelight span{
+    color:#fff;
+    text-transform:uppercase;
+  /*   font-family: 'Pacifico', cursive; */
+    font-family: 'Monda', sans-serif;
+    font-size:5em;
+    animation:animate 2s linear;
+    animation-iteration-count:2;
+  /*   display:table-cell; */
+    padding:0px  4px;
+    text-shadow:0px 0px 20px  #fff,
+        0px 0px 30px  #fff,
+        0px 0px 10px  #fff,
+        0px 0px 1px  #fff
+        ;
+  }
+  .tubelight span:nth-child(1){
+    animation-delay:0s;
+  }
+  .tubelight span:nth-child(2){
+    animation-delay:0.25s;
+  }
+  .tubelight span:nth-child(3){
+    animation-delay:0.5s;
+  }
+  .tubelight span:nth-child(4){
+    animation-delay:0.75s;
+  }
+  .tubelight span:nth-child(5){
+    animation-delay:0.3s;
+  }
+  .tubelight span:nth-child(6){
+    animation-delay:0.5s;
+  }
+  .tubelight span:nth-child(7){
+    animation-delay:0.6s;
+  }
+  .tubelight span:nth-child(8){
+    animation-delay:0.8s;
+  }
+  .tubelight span:nth-child(9){
+    animation-delay:1s;
+  }
+  
+  
+  
+  @keyframes animate{
+    0%,15%,25%,30%,65%,95%{
+      color:#111;
+      text-shadow:none;
+    }
+    10%,20%,31%,60%,100%{
+      color:#fff;
+      text-shadow:0px 0px 20px  #fff,
+        0px 0px 30px  #fff,
+        0px 0px 10px  #fff,
+        0px 0px 1px  #fff
+        ;
+    }
+  }

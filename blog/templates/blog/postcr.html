@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}
+Creat Blogpost
+{% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+    <div class="col-lg-8">
+        <div class="card" style="position:center;">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% if status %}
+                    <div class='alert alert-primary'>{{status}}</div>
+                    {% endif %}
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Your Post Title</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <input type="text" class="form-control" name="title" placeholder="Post Title">
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Your Post</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <textarea class="form-control" type="text" name="content" rows="4" cols="50"
+                                placeholder="Write Here Post"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-3">
+                            <label for="cars">Post Category:</label>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <select name="category" id="">
+                                <option value="">Choose a Category</option>
+                                <option value="Health">Health</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Internet">Internet</option>
+                                <option value="Gadget">Gadget</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="News">News</option>
+                                <option value="Windows">Windows</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Country">Country</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Thumbnail</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <label for="img">Select image:</label>
+                            <input type="file" name="thumbnail" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-9 text-secondary">
+                            <input type="submit" class="btn btn-primary px-4" value="Post">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
