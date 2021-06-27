@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from  PIL import Image
+#from  PIL import Image
+from django_resized import ResizedImageField
 
 # Create your models here.
 
@@ -21,7 +22,7 @@ class Contact(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='default.png', upload_to='profile_pics')
+    image = ResizedImageField(size=[300, 300], quality=100, default='default.png', upload_to='profile_pics')
     bio = models.CharField(max_length=100, null=True)
     nickname = models.CharField(max_length=50, null=True, blank=True)
     phone = models.CharField(max_length=13, null=True, blank=True)
@@ -37,10 +38,9 @@ class Profile(models.Model):
         return f'{self.user.username} Profile'
 
     #fixed Image Size 
-    def save(self, *args, **kwargs):
-        super().save( *args, **kwargs)
-        img = Image.open(self.image.path)
-        if img.height > 300 or img.width >300:
-            output_size = (300, 300)
-            img.thumbnail (output_size)
-            img.save(self.image.path)
+    #def save(self, *args, **kwargs):
+    #    super().save( *args, **kwargs)
+    #    img = Image.open(self.image.path)
+    #       output_size = (300, 300)
+     #       img.thumbnail (output_size)
+     #       img.save(self.image.path)
