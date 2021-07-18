@@ -48,7 +48,9 @@ urlpatterns = [
          ),
          name='password_reset_complete'),
     path('', include('blog.urls')),
-
+    path('api/', include('api.urls')),
+    path('api/rest-auth/', include('rest_auth.urls')),
+    path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
     
 ]
 if settings.DEBUG:
