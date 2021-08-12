@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics, serializers, permissions
 from blog.models import Post
-from users.models import Profile
+from users.models import Profile 
 from .serializers import PostSerializer
 from .serializers import UserSerializer
 # Create your views here.
