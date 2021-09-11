@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n9=v4uvo_2b&hu28n%_!8*xbtt-1!a3$=*^3+#*sto7)lp5b&o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -111,14 +111,11 @@ WSGI_APPLICATION = 'ffblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dcamithsetph16',
-        'USER': 'frfvwxsaldfyyu ',
-        'HOST': 'ec2-44-196-132-15.compute-1.amazonaws.com',
-        'PASSWORD': 'a50939958ab83bbc64b7c5c0504e7e608043f6c89ad1fcec58a6ad6af12120c5',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
