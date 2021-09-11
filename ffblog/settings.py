@@ -111,11 +111,14 @@ WSGI_APPLICATION = 'ffblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dcamithsetph16',
+        'USER': 'frfvwxsaldfyyu ',
+        'HOST': 'ec2-44-196-132-15.compute-1.amazonaws.com',
+        'PASSWORD': 'a50939958ab83bbc64b7c5c0504e7e608043f6c89ad1fcec58a6ad6af12120c5',
+        'PORT': 5432,
     }
 }
-
 
 
 # Password validation
