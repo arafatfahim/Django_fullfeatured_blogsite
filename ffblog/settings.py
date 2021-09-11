@@ -113,13 +113,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dcamithsetph16',
-        'USER': 'frfvwxsaldfyyu ',
+        'USER': 'frfvwxsaldfyyu',
         'HOST': 'ec2-44-196-132-15.compute-1.amazonaws.com',
         'PASSWORD': 'a50939958ab83bbc64b7c5c0504e7e608043f6c89ad1fcec58a6ad6af12120c5',
         'PORT': 5432,
     }
 }
-
+#postgres://frfvwxsaldfyyu:a50939958ab83bbc64b7c5c0504e7e608043f6c89ad1fcec58a6ad6af12120c5@ec2-44-196-132-15.compute-1.amazonaws.com:5432/dcamithsetph16
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
