@@ -184,3 +184,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'blogtalk2021@gmail.com'
 EMAIL_HOST_PASSWORD = 'blogtalk50'
 DRF_API_LOGGER_DATABASE = True
+DRF_API_LOGGER_SIGNAL = True  # Default to False
