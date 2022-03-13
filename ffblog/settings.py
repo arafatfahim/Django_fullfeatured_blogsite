@@ -84,7 +84,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'drf_api_logger.middleware.api_logger_middleware.APILoggerMiddleware',
-    
+
 ]
 
 ROOT_URLCONF = 'ffblog.urls'
@@ -165,10 +165,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MEDIA_ROOT= BASE_DIR / 'media'
-MEDIA_URL='/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
-CRISPY_TEMPLATE_PACK= 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

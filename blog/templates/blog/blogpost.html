@@ -35,8 +35,15 @@ BlogPost
         <div class="project m-0">
           <figure class="portfolio-item" style="margin: 0 0 0rem;">
             <div class="fit-picture">
-              <img class="img-responsive" style="width:100%; height: auto; border-radius: 9px"
-                src="/media/{{post.thumbnail}}" alt="">
+{#              <img class="img-responsive" style="width:100%; height: auto; border-radius: 9px"#}
+{#                src="{% if post.thumbnail %}#}
+{#                /media/{{post.thumbnail}}#}
+{#                {% else %}#}
+{#                {{ post.thumbnail_url }}#}
+{#                {% endif %}"#}
+{#               alt="">#}
+                <img class="img-responsive" style="width:100%; height: auto; border-radius: 9px"
+            src="{{ post.thumbnail_url }}" alt="">
             </div>
           </figure>
         </div>
