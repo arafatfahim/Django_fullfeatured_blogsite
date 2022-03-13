@@ -16,7 +16,7 @@ class UserApiView(generics.ListAPIView):
 
 
 class PostApiDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (permissions.IsAuthenticated,)
+#     permission_classes = (permissions.IsAuthenticated,)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
