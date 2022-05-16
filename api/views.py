@@ -4,8 +4,11 @@ from blog.models import Post
 from users.models import Profile 
 from .serializers import PostSerializer
 from .serializers import UserSerializer
+from rest_framework.authentication import TokenAuthentication
 # Create your views here.
 class PostApiView(generics.ListAPIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    authentication_classes = [TokenAuthentication]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
