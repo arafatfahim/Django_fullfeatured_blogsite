@@ -177,5 +177,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'blogtalk2021@gmail.com'
 EMAIL_HOST_PASSWORD = 'blogtalk50'
-DRF_API_LOGGER_DATABASE = True
-DRF_API_LOGGER_SIGNAL = True  # Default to False
+DRF_API_LOGGER_DATABASE = False
+DRF_API_LOGGER_SIGNAL = False  # Default to False

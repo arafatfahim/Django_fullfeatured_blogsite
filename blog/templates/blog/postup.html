@@ -34,7 +34,9 @@ Post Update
                             <h6 class="mb-0">Your Post Thumbnail</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <img src="/media/{{object.thumbnail}}" alt="">
+{#                            <img src="{{object.thumbnail_url}}" alt="">#}
+                            <img class="img-responsive" style="width:100%; height: auto; border-radius: 9px"
+            src="{{ post.thumbnail_url }}" alt="">
                         </div>
                     </div>
                     <div class="row mb-5">
@@ -69,11 +71,11 @@ Post Update
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Choose New Thumbnail</h6>
+                        <h6 class="mb-0">Submit A Related Image API Link</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <label for="img">Select image:</label>
-                            <input type="file" name="thumbnail" accept="image/*">
+                            <label for="img">Url:</label>
+                            <input type="url" name="thumbnail_url">
                         </div>
                     </div>
                     <div class="row">

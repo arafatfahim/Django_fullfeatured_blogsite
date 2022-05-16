@@ -18,7 +18,7 @@ Creat Blogpost
                             <h6 class="mb-0">Your Post Title</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" name="title" placeholder="Post Title">
+                            <input type="text" class="form-control" name="title" placeholder="Post Title" required>
                         </div>
                     </div>
                     <div class="row mb-5">
@@ -27,7 +27,7 @@ Creat Blogpost
                         </div>
                         <div class="col-sm-9 text-secondary">
                             <textarea class="form-control" type="text" name="content" rows="4" cols="50"
-                                placeholder="Write Here Post"></textarea>
+                                placeholder="Write Here Post" required></textarea>
                         </div>
                     </div>
                     <div class="row mb-5">
@@ -35,7 +35,7 @@ Creat Blogpost
                             <label for="cars">Post Category:</label>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <select name="category" id="">
+                            <select name="category" id="" required>
                                 <option value="">Choose a Category</option>
                                 <option value="Health">Health</option>
                                 <option value="Technology">Technology</option>
@@ -53,11 +53,11 @@ Creat Blogpost
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Thumbnail</h6>
+                        <h6 class="mb-0">Submit A Related Image API Link</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <label for="img">Select image:</label>
-                            <input type="file" name="thumbnail" accept="image/*">
+                            <label for="img">Url:</label>
+                            <input type="url" name="thumbnail_url">
                         </div>
                     </div>
                     <div class="row">
@@ -70,4 +70,4 @@ Creat Blogpost
             </div>
         </div>
     </div>
-    {% endblock body %}
+{% endblock body %}

@@ -1,27 +1,31 @@
 from django.shortcuts import render
 from rest_framework import generics, serializers, permissions
 from blog.models import Post
-from users.models import Profile 
+from users.models import Profile
 from .serializers import PostSerializer
 from .serializers import UserSerializer
 from rest_framework.authentication import TokenAuthentication
 # Create your views here.
+
+
 class PostApiView(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     authentication_classes = [TokenAuthentication]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+
 class UserApiView(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated,)
-    queryset= Profile.objects.all()
+    queryset = Profile.objects.all()
     serializer_class = UserSerializer
 
 
 class PostApiDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (permissions.IsAuthenticated,)
+    # permission_classes = (permissions.IsAuthenticated,)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
 
 class PostApiNewView(generics.ListCreateAPIView):
     permission_classes = (permissions.IsAuthenticated,)
